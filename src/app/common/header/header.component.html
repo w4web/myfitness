@@ -1,0 +1,61 @@
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="header-inner">
+                <div class="main-logo">
+                    <a routerLink="/">
+                        <img src="{{ headerData.logo }}" alt="img" />
+                    </a>
+                </div>
+                <ul class="navTop hide-on-mobile">
+                    <li>Hi, <strong><a routerLink="/">templify</a></strong></li>
+                    <li>
+                        <a routerLink="/" class="notif mail">
+                            <i class="fa fa-envelope"></i><span class="count">0</span>
+                        </a>
+                        <a routerLink="/" class="notif invites">
+                            <i class="fa fa-user"></i><span class="count">0</span>
+                        </a>
+                    </li>
+                    <li><a routerLink="/">Help</a></li>
+                    <li><a routerLink="/">Settings</a></li>
+                    <li><a routerLink="/">Log Out</a></li>
+                    <li class="nav-social">
+                        <span>Follow Us:</span>
+                        <a href="#" class="follow">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="follow">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="menu-handler" (click)="show_mobile_menu = !show_mobile_menu" href="javascript:void(0);">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-menu-outer" [class.show]="show_mobile_menu">
+        <div class="main-menu">
+            <div class="container">
+                <ul>
+                    <li *ngFor="let item of headerData.menu">
+                        <a routerLinkActive="active" routerLink="{{ item.link }}">{{ item.text }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="subMenu" class="sub-menu">
+            <div class="container">
+                <ul>
+                    <li *ngFor="let item of subMenu">
+                        <a routerLink="{{ item.link }}">{{ item.text }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

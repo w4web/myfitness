@@ -1,0 +1,53 @@
+{
+  "logo": "../../assets/images/logo.png",
+  "menu": [
+    {
+      "text": "My home",
+      "link": "/home",
+      "is_child": true,
+      "childs": [
+        {
+          "text": "Sub menu 1",
+          "link": "/innerPage1"
+        },
+        {
+          "text": "Sub menu 2",
+          "link": ""
+        },
+        {
+          "text": "Sub menu 3",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "text": "page2",
+      "link": "/page2",
+      "is_child": true,
+      "childs": [
+        {
+          "text": "Sub page 4",
+          "link": ""
+        },
+        {
+          "text": "Sub page 5",
+          "link": ""
+        },
+        {
+          "text": "Sub page 6",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "text": "page3",
+      "link": "/page3",
+      "is_child": false
+    },
+    {
+      "text": "page4",
+      "link": "/page4",
+      "is_child": false
+    }
+  ]
+}
