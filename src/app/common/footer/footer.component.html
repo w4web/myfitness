@@ -1,0 +1,10 @@
+<footer>
+    <div class="container">
+        <ul class="footerLinks">
+            <li *ngFor="let item of footerData.footerLinks">
+                <a routerLinkActive="active" routerLink="{{ item.link }}">{{ item.text }}</a>
+            </li>
+        </ul>
+        <div class="copyright">{{footerData.copyright}}</div>
+    </div>
+</footer>

@@ -1,0 +1,29 @@
+{
+  "footerLinks": [
+    {
+      "text": "Home",
+      "link": "/home"
+    },
+    {
+      "text": "page1 link",
+      "link": "/page1"
+    },
+    {
+      "text": "page2 link",
+      "link": "/page2"
+    },
+    {
+      "text": "page3 link",
+      "link": "/page3"
+    },
+    {
+      "text": "page4 link",
+      "link": "/page4"
+    },
+    {
+      "text": "page5 link",
+      "link": ""
+    }
+  ],
+  "copyright": "© 2021 MyFitnessPal, Inc."
+}
