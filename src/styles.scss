@@ -6,6 +6,11 @@ a,a:hover,a:focus {outline: none;text-decoration: none;}
 a {color: #0072BC;}
 a:hover {color: #f7941e;}
 
+button.btn.btn-primary,
+a.btn.btn-primary {background-color: #0a5282;border-color: #0a5282;color: #fff;}
+button.btn.btn-primary:hover,
+a.btn.btn-primary:hover {background-color: #0a5282;border-color: #0a5282;}
+
 ul.navTop, .main-menu-outer ul, .footerLinks {list-style: none;margin: 0;padding: 0;}
 .main-content {min-height: 500px;}
 .container {max-width: 1000px;}
@@ -21,9 +26,7 @@ line-height: 14px; margin-left: 5px;}
 ul.navTop li.nav-social {display: flex;align-items: center; padding-right: 0; border: none;}
 ul.navTop li a.follow {background-color: #0072bc; color: #FFFFFF; border-radius: 50%; height: 22px;width: 22px;display: flex;align-items: center;justify-content: center; font-size: 12px; margin-left: 7px;}
 ul.navTop li a.follow:hover {background-color: #f7941e;}
-ul.navTop li.nav-social > span {
-	margin-right: 3px;
-}
+ul.navTop li.nav-social > span {margin-right: 3px;}
 
 .menu-handler {display: block;height: 21px;width: 27px;margin: 0 0 0 auto;}
 .menu-handler span {background-color: #000000;float: left;height: 2px;margin-bottom: 7px;width: 100%;}
@@ -36,6 +39,112 @@ ul.navTop li.nav-social > span {
 .main-menu ul li a, .sub-menu ul li a {color: #FFFFFF; text-transform: uppercase; display: block; line-height: 45px; padding: 0 18px;}
 .main-menu ul li a:hover, .main-menu ul li a.active {background-color: #0a5282;}
 .sub-menu ul li a {font-size: 13px; text-transform: capitalize;}
+
+.card {border: none;box-shadow: 0px 8px 24px rgba(13, 13, 18, 0.1);}
+.card-footer {background-color: #fff;border-top: 1px solid #f0f0f5;}
+.card.no-bg {box-shadow: none;background: none;}
+.dash-col {margin-bottom: 25px;}
+.page-content {padding: 50px 0;}
+
+table.table.table-striped {
+	color: #242428;
+	thead {
+		tr {
+			background-color: #035184;
+			color: #FFFFFF;
+		}
+	}
+	tbody {
+		tr:nth-child(odd) {background-color: #ffffff;}
+		tr:nth-child(even) {background-color: #f6f6f6;}
+		tr:hover {background: #f1f1f1;}
+	}
+	tr th {border-top: none;font-weight: 500;
+		i {font-size: 13px;margin: 0 5px;cursor: pointer;}
+	}
+	tr td {
+		a {color: #a0a5b1;display: inline-block;margin: 0 5px;}
+		a.view {color: #3278b3;}
+		a.edit {color: #0070bf;}
+		a.delete {color: #dc4d4e;}
+		i {font-size: 19px;}
+	}
+}
+
+// Form style
+
+.form-group {
+	label {
+	  color: #242428;
+	  font-size: 12px;
+	  margin-top: 0;
+	  margin-bottom: 5px;
+	}
+	.form-control {
+	  font-size: 14px;
+	  height: 34px;
+	  background-color: #fff;
+	  border: 1px solid #dfdfe8;
+	  color: #666;
+	  line-height: 1.4em;
+	  &:focus {
+		border-color: #007fb6;
+		outline: 0 !important;
+		box-shadow: none !important;
+	  }
+	  &::placeholder {
+		color: #adadad;
+		opacity: 1;
+	  }
+	  &:-ms-input-placeholder {
+		color: #adadad;
+	  }
+	  &::-ms-input-placeholder {
+		color: #adadad;
+	  }
+	}
+	textarea.form-control {
+	  height: 125px;
+	}
+	formly-field-select,
+	.formly-field-select {
+	  display: block;
+	  position: relative;
+	}
+	formly-field-select::after,
+	.formly-field-select::after {
+	  content: '';
+	  display: block;
+	  position: absolute;
+	  right: 15px;
+	  top: 50%;
+	  margin-top: -2px;
+	  width: 0;
+	  height: 0;
+	  border-left: 4px solid transparent;
+	  border-right: 4px solid transparent;
+	  border-top: 4px solid #242428;
+	  z-index: 1;
+	}
+	select.form-control {
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  padding-right: 30px;
+	}
+	.form-control.is-invalid {
+	  border-color: #dc3545 !important;
+	}
+	.tio-col {
+	  display: flex;
+	  align-items: center;
+	  .formly-field-select {
+		flex-grow: 1;
+	  }
+	  span {
+		padding-left: 10px;
+	  }
+	}
+  }
 
 footer {background-color: #efefef; padding: 30px 0; letter-spacing: 0.5px;}
 .footerLinks {display: flex; flex-wrap: wrap; align-items: center;justify-content: center;font-size: 11px;}

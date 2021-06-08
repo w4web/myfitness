@@ -1,2 +1,53 @@
-<h1 style="text-align: center; padding-top: 200px;">Home</h1>
+<section class="page-content">
+    <div class="container">
+        <h4 class="mb-2">Starred Segments allow you to keep.</h4>
+        <p class="mb-4 subtitle">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus autem eveniet perferendis, blanditiis
+            praesentium animi
+            laboriosam placeat delectus eum.
+        </p>
 
+        <div class="card">
+            <div class="card-body">
+                <div class="btn-wrap text-right mb-3">
+                    <button class="btn btn-primary" [routerLink]="['/add']">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Sport</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Avg. Grade</th>
+                                <th scope="col">Men</th>
+                                <th scope="col">Women</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of TLData">
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.sport }}</td>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.grade }}</td>
+                                <td>{{ item.man }}</td>
+                                <td>{{ item.women }}</td>
+                                <td style="width: 130px; text-align: center">
+                                    <a [routerLink]="['/add']" class="edit">
+                                      <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a class="delete">
+                                      <i class="fa fa-trash-o"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

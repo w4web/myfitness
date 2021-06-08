@@ -16,4 +16,14 @@ export class DataService {
     return this.http.get<any>('./assets/footer.json');
   }
 
+  // Mock data
+
+  getTLData(): any {
+    return this.http.get<any>('./assets/tableLayout.json');
+  }
+
+  getProductFields(): any {
+    return this.http.get<any>('./assets/productFormFields.json');
+  }
+
 }

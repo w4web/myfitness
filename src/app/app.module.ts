@@ -16,6 +16,14 @@ import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { Page4Component } from './page4/page4.component';
 import { InnerPage1Component } from './inner-page1/inner-page1.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { AddComponent } from './home/add/add.component';
+
+export function minlengthValidationMessages(err: any, field: any): any {
+  return `Should have atleast ${field.templateOptions.minLength} characters`;
+}
 
 @NgModule({
   declarations: [
@@ -27,7 +35,8 @@ import { InnerPage1Component } from './inner-page1/inner-page1.component';
     Page2Component,
     Page3Component,
     Page4Component,
-    InnerPage1Component
+    InnerPage1Component,
+    AddComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,16 @@ import { InnerPage1Component } from './inner-page1/inner-page1.component';
     NgbModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot({ 
+      extras: { lazyRender: true },
+      validationMessages: [
+        { name: 'required', message: 'This field is required' },
+        { name: 'minlength', message: minlengthValidationMessages },
+      ],
+    }),
+    FormlyBootstrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

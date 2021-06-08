@@ -1,0 +1,18 @@
+<div class="ProdutEditPage page-content">
+    <div class="container">
+        <h3 class="mb-4">Create new Item</h3>
+
+        <form [formGroup]="editForm" (ngSubmit)="save()">
+            <formly-form [model]="model" [fields]="fields" [options]="options" [form]="editForm"></formly-form>
+
+            <div class="form-btns mt-4">
+                <button type="submit" class="btn btn-primary" [disabled]="!editForm.valid">
+                    <span>Create item</span>
+                </button>
+                <button type="button" class="btn btn-link" (click)="previousState()">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
